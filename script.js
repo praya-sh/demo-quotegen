@@ -18,5 +18,27 @@ const quotes = [
 
 let i = 0;
 const quoteText = document.getElementById('quoteText');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const randomBtn = document.getElementById('randomBtn');
+
+function showNext() {
+    i = (i + 1) % quotes.length;
+    quoteText.textContent = quotes[i];
+}
+
+function showPrevious() {
+    i = (i - 1 + quotes.length) % quotes.length;
+    quoteText.textContent = quotes[i];
+}
+
+function showRandom() {
+    i = Math.floor(Math.random() * quotes.length);
+    quoteText.textContent = quotes[i];
+}
+
+nextBtn.addEventListener('click', showNext);
+prevBtn.addEventListener('click', showPrevious);
+randomBtn.addEventListener('click', showRandom);
 
 quoteText.textContent = quotes[i];
