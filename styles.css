@@ -30,6 +30,27 @@ h1 {
     color: #333;
 }
 
+.font-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.font-btn {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.font-btn:hover {
+    background: #f0f0f0;
+}
+
 .quote-display {
     border: 1px solid #ddd;
     padding: 30px;

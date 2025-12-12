@@ -21,6 +21,8 @@ const quoteText = document.getElementById('quoteText');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const randomBtn = document.getElementById('randomBtn');
+const decreaseFont = document.getElementById('decreaseFont');
+const increaseFont = document.getElementById('increaseFont');
 
 function showNext() {
     i = (i + 1) % quotes.length;
@@ -37,8 +39,24 @@ function showRandom() {
     quoteText.textContent = quotes[i];
 }
 
+function increaseFontSize() {
+    if (fontSize < 2) {
+        fontSize += 0.1;
+        quoteText.style.fontSize = fontSize + 'em';
+    }
+}
+
+function decreaseFontSize() {
+    if (fontSize > 0.8) {
+        fontSize -= 0.1;
+        quoteText.style.fontSize = fontSize + 'em';
+    }
+}
+
 nextBtn.addEventListener('click', showNext);
 prevBtn.addEventListener('click', showPrevious);
 randomBtn.addEventListener('click', showRandom);
+increaseFont.addEventListener('click', increaseFontSize);
+decreaseFont.addEventListener('click', decreaseFontSize);
 
 quoteText.textContent = quotes[i];
