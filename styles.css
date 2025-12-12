@@ -30,11 +30,32 @@ h1 {
     color: #333;
 }
 
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-select {
+    padding: 10px 15px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.category-select:hover {
+    background: #f0f0f0;
+}
+
 .font-controls {
     display: flex;
     gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
 }
 
 .font-btn {
@@ -98,6 +119,10 @@ h1 {
 
     h1 {
         font-size: 1.5em;
+    }
+
+    .controls {
+        flex-direction: column;
     }
 
     .nav-btn {

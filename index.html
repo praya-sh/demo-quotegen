@@ -10,13 +10,21 @@
     <div class="container">
         <h1>Quote Generator</h1>
         
-        <div class="font-controls">
-            <button class="font-btn" id="decreaseFont">A-</button>
-            <button class="font-btn" id="increaseFont">A+</button>
+        <div class="controls">
+            <select class="category-select" id="categorySelect">
+                <option value="motivation">Motivation</option>
+                <option value="science">Science</option>
+                <option value="wisdom">Wisdom</option>
+            </select>
+
+            <div class="font-controls">
+                <button class="font-btn" id="decreaseFont">A-</button>
+                <button class="font-btn" id="increaseFont">A+</button>
+            </div>
         </div>
 
         <div class="quote-display">
-            <p class="quote-text" id="quoteText">Your quote will appear here</p>
+            <p class="quote-text" id="quoteText"></p>
         </div>
 
         <div class="navigation">
