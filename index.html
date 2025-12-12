@@ -4,29 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Generator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Quote Generator</h1>
-        
-        <div class="category-selector">
-            <label for="category">Category:</label>
-            <select id="category">
-                <option value="all">All Categories</option>
-                <option value="motivation">Motivation</option>
-                <option value="science">Science</option>
-            </select>
-        </div>
-
-        <div class="quote-container">
-            <p id="quote-text">"The only way to do great work is to love what you do."</p>
-            <p id="quote-author">- Steve Jobs</p>
-        </div>
-
-        <div class="navigation-buttons">
-            <button id="prev-btn">Previous</button>
-            <button id="random-btn">Random</button>
-            <button id="next-btn">Next</button>
+        <div class="quote-display">
+            <p class="quote-text" id="quoteText">Your quote will appear here</p>
         </div>
     </div>
 </body>
