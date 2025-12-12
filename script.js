@@ -28,6 +28,7 @@ let fontSize = 1.2;
 
 const quoteText = document.getElementById('quoteText');
 const categorySelect = document.getElementById('categorySelect');
+const themeToggle = document.getElementById('themeToggle');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const randomBtn = document.getElementById('randomBtn');
@@ -55,6 +56,11 @@ function updateCategory() {
     quoteText.textContent = quotes[currentCategory][i];
 }
 
+function toggleTheme() {
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+}
+
 function increaseFontSize() {
     if (fontSize < 2) {
         fontSize += 0.1;
@@ -70,6 +76,7 @@ function decreaseFontSize() {
 }
 
 categorySelect.addEventListener('change', updateCategory);
+themeToggle.addEventListener('change', toggleTheme);
 nextBtn.addEventListener('click', showNext);
 prevBtn.addEventListener('click', showPrevious);
 randomBtn.addEventListener('click', showRandom);
